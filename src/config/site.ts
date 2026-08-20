@@ -96,7 +96,7 @@ export const site = {
     bluesky_handle: undefined as string | undefined,
     medium_username: undefined as string | undefined,
     /** Path to CV PDF in public/assets/pdf/ */
-    cv_pdf: '/assets/pdf/example_pdf.pdf',
+    cv_pdf: '/assets/pdf/Max_van_t_Hart_CV.pdf',
     /** Show RSS icon in social links */
     rss_icon: false,
   },
@@ -118,23 +118,23 @@ navbar: {
   // ─── Footer ────────────────────────────────────────────────────────────────
 
   footer: {
-    // /**
-    //  * Text shown in footer. HTML is supported.
-    //  * Leave empty string to hide.
-    //  */
-    // text: `Powered by <a href="https://github.com/dadangnh/as-folio" target="_blank" rel="noopener noreferrer">as-folio</a>.
-    //   Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.`,
-    // /** Show "Last updated" timestamp in footer. */
-    // lastUpdated: false,
-    // /** Path to impressum/legal page (EU GDPR). Leave undefined to hide. */
-    // impressum: undefined as string | undefined,
-    // /**
-    //  * Footer display mode:
-    //  * 'sticky'  — always visible at the bottom of the viewport (al-folio default)
-    //  * 'normal'  — sits at the natural bottom of page content (only visible when scrolled down)
-    //  * 'hidden'  — footer is not rendered at all
-    //  */
-    // position: 'sticky' as 'sticky' | 'normal' | 'hidden',
+    /**
+     * Text shown in footer. HTML is supported.
+     * Leave empty string to hide.
+     */
+    text: `Powered by <a href="https://github.com/dadangnh/as-folio" target="_blank" rel="noopener noreferrer">as-folio</a>.
+      Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.`,
+    /** Show "Last updated" timestamp in footer. */
+    lastUpdated: false,
+    /** Path to impressum/legal page (EU GDPR). Leave undefined to hide. */
+    impressum: undefined as string | undefined,
+    /**
+     * Footer display mode:
+     * 'sticky'  — always visible at the bottom of the viewport (al-folio default)
+     * 'normal'  — sits at the natural bottom of page content (only visible when scrolled down)
+     * 'hidden'  — footer is not rendered at all
+     */
+    position: 'hidden' as 'sticky' | 'normal' | 'hidden',
   },
 
   // ─── CV page ───────────────────────────────────────────────────────────────
@@ -147,7 +147,7 @@ navbar: {
      */
     format: 'rendercv' as 'rendercv' | 'jsonresume',
     /** Path to CV PDF for the download button in public/assets/pdf/. */
-    pdfPath: 'public/assets/pdf/Max_van_t_Hart_CV.pdf',
+    pdfPath: '/assets/pdf/Max_van_t_Hart_CV.pdf',
   },
 
   // ─── Blog ──────────────────────────────────────────────────────────────────
@@ -185,24 +185,24 @@ navbar: {
   // ─── About page sections ──────────────────────────────────────────────────
 
   announcements: {
-    // /** Show news/announcements section on the about page. */
-    // enabled: true,
-    // /** Enable vertical scroll if more than 3 items. */
-    // scrollable: true,
-    // /** Max news items to show (undefined = show all). */
-    // limit: 5 as number | undefined,
+    /** Show news/announcements section on the about page. */
+    enabled: false,
+    /** Enable vertical scroll if more than 3 items. */
+    scrollable: true,
+    /** Max news items to show (undefined = show all). */
+    limit: 5 as number | undefined,
   },
 
   latestPosts: {
-    // /** Show latest blog posts section on the about page. */
-    // enabled: true,
-    // scrollable: true,
-    // limit: 3 as number | undefined,
+    /** Show latest blog posts section on the about page. */
+    enabled: false,
+    scrollable: true,
+    limit: 3 as number | undefined,
   },
 
   selectedPapers: {
-    // /** Show selected publications section on the about page. */
-    // enabled: true,
+    /** Show selected publications section on the about page. */
+    enabled: false,
   },
 
   // ─── Features ─────────────────────────────────────────────────────────────
