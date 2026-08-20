@@ -68,7 +68,9 @@ const renderedAnnouncements = await Promise.all(
 
       <div class="clearfix">
         <!-- Bio content from about.mdx -->
-        <div class="prose max-w-none about-content [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6">
+        <div
+          class="prose about-content max-w-none [&_ol]:list-decimal [&_ol]:pl-6 [&_ul]:list-disc [&_ul]:pl-6"
+        >
           <AboutContent />
         </div>
       </div>
@@ -229,7 +231,7 @@ const renderedAnnouncements = await Promise.all(
     font-weight: 700;
     margin-bottom: 0.25rem;
   }
-    .about-content :global(ul) {
+  .about-content :global(ul) {
     list-style-type: disc;
     padding-left: 1.5rem;
     margin-top: 1rem;
