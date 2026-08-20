@@ -24,7 +24,7 @@
   ],
   "license": "MIT",
   "type": "module",
-  "packageManager": "yarn@4.13.0",
+  "packageManager": "yarn@4.14.1",
   "engines": {
     "node": ">=24"
   },
@@ -41,9 +41,6 @@
     "MIGRATE.md",
     "LICENSE"
   ],
-  "peerDependencies": {
-    "astro": ">=6.4.0"
-  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -67,11 +64,11 @@
     "citations:update": "node --strip-types scripts/update-citations.ts"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "7.2.0",
-    "@astrojs/mdx": "^6.0.0",
+    "@astrojs/markdown-remark": "7.2.4",
+    "@astrojs/mdx": "7.0.7",
     "@astrojs/partytown": "^2.1.7",
-    "@astrojs/react": "^5.0.7",
-    "@astrojs/rss": "^4.0.18",
+    "@astrojs/react": "6.0.4",
+    "@astrojs/rss": "4.0.19",
     "@fontsource/roboto": "^5.2.10",
     "@fontsource/roboto-condensed": "^5.2.8",
     "@fontsource/source-code-pro": "^5.2.7",
@@ -95,7 +92,7 @@
     "unplugin-icons": "^23.0.1"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "0.9.10",
     "@commitlint/cli": "^21.0.0",
     "@commitlint/config-conventional": "^21.0.0",
     "@eslint/js": "^10.0.0",
@@ -109,6 +106,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitest/coverage-v8": "^4.1.9",
+    "astro": "7.2.4",
     "astro-eslint-parser": "^1.4.0",
     "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.8",
