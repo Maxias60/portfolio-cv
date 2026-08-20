@@ -108,10 +108,9 @@ export const site = {
     socialIcons: false,
 
     items: [
-      { label: 'Home', href: '/' },
+      { label: 'About Me', href: '/' },
       { label: 'CV', href: '/cv/' },
       { label: 'Projects', href: '/projects/' },
-      { label: 'About', href: '/about/' },
     ] as NavItem[],
   },
 
