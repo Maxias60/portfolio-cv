@@ -2,7 +2,7 @@
 title: Special Theory of Relativity
 description: A revolutionary framework reconciling classical mechanics with electromagnetism by postulating the constancy of the speed of light and the equivalence of inertial reference frames.
 importance: 1
-category: physics
+category: Favorites
 img: /assets/img/1.jpg
 related_publications:
   - einstein1905relativity

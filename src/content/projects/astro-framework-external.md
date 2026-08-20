@@ -1,25 +1,9 @@
 ---
-title: 'Astro Framework'
-description: 'An external project page — visiting this card redirects to the official Astro website. Demonstrates the redirect field.'
+title: 'Cults3D'
+description: 'A collection of my custom 3D-printable designs and modification kits'
 importance: 50
 category: external
-redirect: https://astro.build
+redirect: https://cults3d.com/en/users/Maxias/3d-models
 img: /assets/img/2.jpg
-img_alt: Astro framework logo and rocket illustration
+img_alt: Preview of my Cults3D profile and 3D models
 ---
-
-This project page demonstrates the `redirect` field. Clicking the card or visiting
-`/projects/astro-framework-external/` redirects immediately to `https://astro.build`.
-
-Use `redirect` for projects that are hosted on external platforms (npm, PyPI, a dedicated
-website) where the project detail page would just duplicate content that already exists
-at the canonical URL.
-
-```yaml
----
-title: My External Project
-redirect: https://example.com/my-project
----
-```
-
-No content body is needed. The redirect happens at the Astro routing level.

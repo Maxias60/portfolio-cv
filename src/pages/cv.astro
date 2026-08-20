@@ -21,6 +21,7 @@ const jsonResume = format === 'jsonresume' ? (resumeData as JSONResume) : null;
 const rc = renderCV?.cv ?? null;
 const education = (rc?.sections?.education ?? []) as RenderCVEntry[];
 const experience = (rc?.sections?.experience ?? []) as RenderCVEntry[];
+const projects = (rc?.sections?.projects ?? []) as RenderCVEntry[];
 const rcPublications = (rc?.sections?.publications ?? []) as RenderCVEntry[];
 const awards = (rc?.sections?.awards ?? []) as RenderCVEntry[];
 const skills = (rc?.sections?.skills ?? []) as RenderCVEntry[];
@@ -38,6 +39,7 @@ if (format === 'rendercv' && rc) {
   if (rc.summary) tocItems.push({ label: 'Professional Summary', href: '#summary' });
   if (education.length > 0) tocItems.push({ label: 'Education', href: '#education' });
   if (experience.length > 0) tocItems.push({ label: 'Experience', href: '#experience' });
+  if (projects.length > 0) tocItems.push({ label: 'Projects', href: '#projects' });
   if (rcPublications.length > 0) tocItems.push({ label: 'Publications', href: '#publications' });
   if (awards.length > 0) tocItems.push({ label: 'Awards', href: '#awards' });
   if (skills.length > 0) tocItems.push({ label: 'Skills', href: '#skills' });
@@ -179,6 +181,22 @@ if (format === 'rendercv' && rc) {
                 </CVSection>
               )}
 
+              {projects.length > 0 && (
+                <CVSection title="Projects" id="projects">
+                  <ul class="card-text font-weight-light list-group list-group-flush">
+                    {projects.map((e) => (
+                      <CVEntry
+                        title={e.name ?? ''}
+                        location={e.location}
+                        dates={formatDateRange(e.start_date, e.end_date)}
+                        highlights={e.highlights}
+                        url={e.url}
+                      />
+                    ))}
+                  </ul>
+                </CVSection>
+              )}
+
               {rcPublications.length > 0 && (
                 <CVSection title="Selected Publications" id="publications">
                   <ul class="card-text font-weight-light list-group list-group-flush">
@@ -195,7 +213,7 @@ if (format === 'rendercv' && rc) {
               )}
 
               {awards.length > 0 && (
-                <CVSection title="Honors &amp; Awards" id="awards">
+                <CVSection title="Honors & Awards" id="awards">
                   <ul class="card-text font-weight-light list-group list-group-flush">
                     {awards.map((e) => (
                       <CVEntry
