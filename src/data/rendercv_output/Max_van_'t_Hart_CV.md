@@ -4,27 +4,21 @@
 - Email: [maxvanthart@gmail.com](mailto:maxvanthart@gmail.com)
 - Location: Maarssen, Utrecht, Netherlands
 
-
 # Education
+
 ## **TU Delft**, High-Tech Engineering
 
 **MSc**
 
-
 Delft, Netherlands
 
-
 2022 – present
-
-
 
 ## **TU Delft**, Mechanical Engineering
 
 **BSc**
 
-
 Delft, Netherlands
-
 
 2022 – 2026
 
@@ -32,29 +26,21 @@ Delft, Netherlands
 
 - Completed my graduation project at the Cognitive Robotics department, developing a lab-cleanup robot based on the MIRTE Master Platform
 
-
-
 ## **TU Delft**, Applied Physics
 
 **BSc**
 
-
 Delft, Netherlands
-
 
 2021 – 2022
 
 - Started in Applied Physics before switching to Mechanical Engineering
 
-
-
 ## **RSG Broklede**, Nature & Technology
 
 **VWO**
 
-
 Breukelen, Netherlands
-
 
 2015 – 2021
 
@@ -62,16 +48,13 @@ Breukelen, Netherlands
 
 - Completed my VWO graduation project by designing and building a functional railgun
 
-
-
 # Experience
+
 ## **RoBoHouse**, Lead Mechanical Engineer
 
 Delft, Netherlands
 
 June 2025 – Dec 2025
-
-
 
 7 months
 
@@ -79,15 +62,11 @@ June 2025 – Dec 2025
 
 - Designed, developed, and manufactured a fully functional unmanned ground vehicle (UGV)
 
-
-
 ## **Picnic**, Delivery Driver
 
 Utrecht, Netherlands
 
 Feb 2021 – Aug 2023
-
-
 
 2 years 7 months
 
@@ -95,21 +74,15 @@ Feb 2021 – Aug 2023
 
 - Gained extensive driving and customer-service experience
 
-
-
 ## **Notary Office**, Employee
 
 Maarssen, Netherlands
 
 May 2022 – Aug 2022
 
-
-
 4 months
 
 - Assisted with the processing of sensitive information
-
-
 
 ## **Albert Heijn**, Store Employee
 
@@ -117,17 +90,14 @@ Maarssen, Netherlands
 
 Dec 2018 – present
 
-
-
 7 years 9 months
 
 - Worked for several years in the fruit and vegetable department
 
 - Regularly assisted customers with questions and product requests
 
-
-
 # Projects
+
 ## **Custom High-Performance E-Bikes**
 
 2021 – present
@@ -137,8 +107,6 @@ Dec 2018 – present
 - Developed skills in soldering, CAD, programming, 3D printing, and bicycle mechanics
 
 - Progressed from simple off-the-shelf electronics to systems based on the open-source VESC platform
-
-
 
 ## **Mason**
 
@@ -150,8 +118,6 @@ Dec 2018 – present
 
 - Responsible for designing and producing most of the robot's movement systems
 
-
-
 ## **GreenRocket**
 
 2025 – 2025
@@ -159,8 +125,6 @@ Dec 2018 – present
 - Built a seed-planting robot with four other students for the Boskalis Hackathon hosted by the TU Delft Robotics Student Association
 
 - The project won the hackathon
-
-
 
 ## **PijpMasterPro6000**
 
@@ -170,8 +134,6 @@ Dec 2018 – present
 
 - The team placed second in the hackathon
 
-
-
 ## **Custom Lightweight Gaming Mice**
 
 2024 – present
@@ -180,8 +142,6 @@ Dec 2018 – present
 
 - Started as a personal project and developed into selling modification kits online
 
-
-
 ## **Custom Car Audio System**
 
 2025 – 2025
@@ -189,8 +149,6 @@ Dec 2018 – present
 - Built a custom sound system for a car together with my brother
 
 - Reverse engineered existing components and designed custom parts to install larger speakers in the original locations
-
-
 
 ## **Railgun**
 
@@ -202,22 +160,17 @@ Dec 2018 – present
 
 - Designed and programmed supporting electronics using Arduino and later ESP32 hardware
 
-
-
 # Awards
+
 ## **Boskalis Hackathon Winner**
 
 Jan 2025
 
 - Built the winning GreenRocket seed-planting robot with a team of students
 
-
-
 ## **Certified SOLIDWORKS Professional (CSWP)**
 
 Jan 2024
-
-
 
 ## **Green Award**
 
@@ -225,9 +178,8 @@ Jan 2023
 
 - Awarded for incorporating topology optimization into the team's first-year engineering project
 
-
-
 # Skills
+
 **CAD:** SOLIDWORKS, Certified SOLIDWORKS Professional (CSWP)
 
 **Prototyping:** 3D printing, soldering, mechanical assembly
@@ -237,6 +189,7 @@ Jan 2023
 **Engineering:** Mechanical design, electronics, rapid prototyping
 
 # Interests
+
 **Engineering:** Robotics, mechanical design, electronics, 3D printing
 
 **Automotive:** Cars, bicycles, vehicle technology

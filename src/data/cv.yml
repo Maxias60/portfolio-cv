@@ -47,7 +47,7 @@ cv:
           - Completed my VWO graduation project by designing and building a functional railgun
 
     experience:
-      - company: RoBoHouse 
+      - company: RoBoHouse
         position: Lead Mechanical Engineer
         location: Delft, Netherlands
         start_date: 2025-06
@@ -55,7 +55,7 @@ cv:
         highlights:
           - Led the mechanical engineering work within the multidisciplinary in-house SUSAG project
           - Designed, developed, and manufactured a fully functional unmanned ground vehicle (UGV)
-      
+
       - company: Picnic
         position: Delivery Driver
         location: Utrecht, Netherlands
