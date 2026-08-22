@@ -1,6 +1,6 @@
 ---
 title: Discthrower
-description: My 1st year engineering graduation project where we won the "Green Award" by using Topology optimization. 
+description: My 1st year engineering graduation project where we won the "Green Award" by using Topology optimization.
 importance: 4
 category: other
 img: /assets/img/1.jpg

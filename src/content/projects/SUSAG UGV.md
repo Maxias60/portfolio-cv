@@ -1,6 +1,6 @@
 ---
 title: SLIP
-description: A multidisciplinary project where a fully custom, high power unmanned ground vehicle meant for heavy loads and harsh terrain was designed, developed and produced. Developed at RoBoHouse Delft in collaboration with SUSAG. 
+description: A multidisciplinary project where a fully custom, high power unmanned ground vehicle meant for heavy loads and harsh terrain was designed, developed and produced. Developed at RoBoHouse Delft in collaboration with SUSAG.
 importance: 3
 category: Favorites
 img: /assets/img/1.jpg

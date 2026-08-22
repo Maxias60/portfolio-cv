@@ -16,7 +16,7 @@ cv:
         start_date: 2022
         end_date: present
         location: Delft, Netherlands
-        highlights: 
+        highlights:
           - Currently in the 1st year of the High-Tech Engineering master.
           - Courses are selected with a focus on Mechatronics System Design
 
@@ -92,7 +92,7 @@ cv:
           - Designed and built custom e-bikes for myself and family members
           - Developed skills in soldering, CAD, programming, 3D printing, 3D scanning, and bicycle mechanics
           - Progressed from simple off-the-shelf electronics to systems based on the open-source VESC platform
-      
+
       - name: Custom Lightweight Gaming Mice
         start_date: 2025
         end_date: 2025
@@ -106,7 +106,7 @@ cv:
         highlights:
           - A multidisciplinary project where a fully custom, high power unmanned ground vehicle meant for heavy loads and harsh terrain was designed, developed and produced
           - Developed at RoBoHouse Delft in collaboration with SUSAG
-      
+
       - name: Mason
         start_date: 2024
         end_date: 2025

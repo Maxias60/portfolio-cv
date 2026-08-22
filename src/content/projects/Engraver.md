@@ -1,6 +1,6 @@
 ---
 title: Engraving Machine
-description: An engraving machine made in a project for the 2nd year of engineering. 
+description: An engraving machine made in a project for the 2nd year of engineering.
 importance: 3
 category: other
 img: /assets/img/1.jpg

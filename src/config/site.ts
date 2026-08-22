@@ -35,7 +35,7 @@ export const site = {
   title: "Max van 't Hart",
 
   /** Site description. Used in meta tags. */
-  description: 'Mechanical Engineering MSc Student • Robotics',
+  description: 'Mechanical Engineering MSc Student • Mechatronics',
 
   /** Language code for the site. */
   lang: 'en',
@@ -56,13 +56,13 @@ export const site = {
      * Subtitle below your name on the about page.
      * HTML is supported.
      */
-    subtitle: `Mechanical Engineering MSc Student • Robotics`,
+    subtitle: `Mechanical Engineering MSc Student • Mechatronics`,
 
     /**
      * Address block below profile photo.
      * HTML is supported.
      */
-    moreInfo: `<p>TU Delft</p>
+    moreInfo: `<p>Technical University of Delft</p>
   <p>Mechanical Engineering</p>
   <p>Maarssen, Utrecht, Netherlands</p>
   <p>maxvanthart@gmail.com</p>
@@ -388,7 +388,8 @@ export const site = {
   pages: {
     projects: {
       /** Description shown below the "projects" heading on the projects page. */
-      description: 'These projects either sparked my passion for robotics and mechanical engineering, were especially enjoyable to work on, or both.',
+      description:
+        'These projects either sparked my passion for robotics and mechanical engineering, were especially enjoyable to work on, or both.',
     },
     teaching: {
       /** Description shown below the "teaching" heading on the teaching page. */

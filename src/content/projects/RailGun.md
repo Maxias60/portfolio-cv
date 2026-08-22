@@ -1,7 +1,7 @@
 ---
 title: Railgun
-description: A functional railgun built in collaboration with a fellow student for the middleschool graduation project.
-importance: 5
+description: A functional railgun built for the VWO graduation project.
+importance: 6
 category: Favorites
 img: /assets/img/1.jpg
 ---

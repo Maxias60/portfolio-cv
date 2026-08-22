@@ -1,7 +1,7 @@
 ---
-title: Custom Lightweight Gaming Mice
-description: An ongoing journey with modifying top-tier gaming mice to reduce their weight drasticly. These designs are being sold online on my Cults3D profile for others to 3D-print and enjoy.
-importance: 2
+title: Mirte MASTER-based Lab Cleanup Robot
+description: Mirte MASTER-based autonomous laboratory cleanup robot made for the mechanical engineering bachelor graduation project.
+importance: 5
 category: Favorites
 img: /assets/img/1.jpg
 ---
