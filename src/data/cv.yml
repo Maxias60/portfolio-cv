@@ -7,8 +7,7 @@ cv:
   email: maxvanthart@gmail.com
   phone: tel:+31683915226
 
-  summary: Mechanical engineering student with a strong interest in robotics, mechanical design, CAD, prototyping, electronics, and 3D printing. Experienced in developing multidisciplinary engineering projects ranging from robotics and custom e-bikes to lightweight gaming mouse modifications.
-
+  summary: Mechanical engineering student with a strong interest in robotics, mechanical design, CAD, prototyping, electronics, and 3D printing and scanning. Experienced in developing both personal engineering projects and multidisciplinary robotic systems.
   sections:
     education:
       - institution: TU Delft
@@ -17,6 +16,9 @@ cv:
         start_date: 2022
         end_date: present
         location: Delft, Netherlands
+        highlights: 
+          - Currently in the 1st year of the High-Tech Engineering master.
+          - Courses are selected with a focus on Mechatronics System Design
 
       - institution: TU Delft
         area: Mechanical Engineering
@@ -88,9 +90,23 @@ cv:
         end_date: present
         highlights:
           - Designed and built custom e-bikes for myself and family members
-          - Developed skills in soldering, CAD, programming, 3D printing, and bicycle mechanics
+          - Developed skills in soldering, CAD, programming, 3D printing, 3D scanning, and bicycle mechanics
           - Progressed from simple off-the-shelf electronics to systems based on the open-source VESC platform
+      
+      - name: Custom Lightweight Gaming Mice
+        start_date: 2025
+        end_date: 2025
+        highlights:
+          - Reverse engineered existing mouse shapes using 3D scans and CAD
+          - Designed, developed, tested and iterated my own designs in-house
 
+      - name: SLIP
+        start_date: 2025
+        end_date: 2026
+        highlights:
+          - A multidisciplinary project where a fully custom, high power unmanned ground vehicle meant for heavy loads and harsh terrain was designed, developed and produced
+          - Developed at RoBoHouse Delft in collaboration with SUSAG
+      
       - name: Mason
         start_date: 2024
         end_date: 2025
@@ -98,42 +114,6 @@ cv:
           - Developed a robotic system for SMB Geveltechniek with a team of six students during a Robotics minor
           - Robot was designed to scan brick walls using a stereo camera, apply jointing material, and clean the wall afterwards
           - Responsible for designing and producing most of the robot's movement systems
-
-      - name: GreenRocket
-        start_date: 2025
-        end_date: 2025
-        highlights:
-          - Built a seed-planting robot with four other students for the Boskalis Hackathon hosted by the TU Delft Robotics Student Association
-          - The project won the hackathon
-
-      - name: PijpMasterPro6000
-        start_date: 2025
-        end_date: 2025
-        highlights:
-          - Designed and built a pipe-navigating robot with four other students for the Underground Robotics Hackathon hosted by the TU Delft Robotics Student Association
-          - The team placed second in the hackathon
-
-      - name: Custom Lightweight Gaming Mice
-        start_date: 2024
-        end_date: present
-        highlights:
-          - Designed custom modification kits that convert existing gaming mice into lightweight high-performance designs
-          - Started as a personal project and developed into selling modification kits online
-
-      - name: Custom Car Audio System
-        start_date: 2025
-        end_date: 2025
-        highlights:
-          - Built a custom sound system for a car together with my brother
-          - Reverse engineered existing components and designed custom parts to install larger speakers in the original locations
-
-      - name: Railgun
-        start_date: 2021
-        end_date: 2021
-        highlights:
-          - Built a functioning railgun with another student as a VWO final project
-          - Used an approximately 450 V high-voltage capacitor bank and electromagnetic acceleration
-          - Designed and programmed supporting electronics using Arduino and later ESP32 hardware
 
     awards:
       - name: Boskalis Hackathon Winner
@@ -154,16 +134,16 @@ cv:
 
     skills:
       - label: CAD
-        details: SOLIDWORKS, Certified SOLIDWORKS Professional (CSWP)
+        details: SOLIDWORKS, Certified SOLIDWORKS Professional (CSWP), Onshape
 
-      - label: Prototyping
-        details: 3D printing, soldering, mechanical assembly
+      - label: Prototyping & Manufacturing
+        details: 3D printing, 3D scanning, reverse engineering, soldering, mechanical assembly
 
       - label: Programming
-        details: Python
+        details: Python, LispBM for VESC
 
-      - label: Engineering
-        details: Mechanical design, electronics, rapid prototyping
+      - label: Electronics
+        details: KiCad, PCB design, battery systems, high-power BLDC motor systems
 
     interests:
       - label: Engineering

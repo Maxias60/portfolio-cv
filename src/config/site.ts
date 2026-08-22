@@ -210,7 +210,7 @@ export const site = {
     /** Enable dark/light mode toggle in navbar. */
     darkmode: true,
     /** Enable ⌘K search. */
-    search: true,
+    search: false,
     /** Enable reading progress bar on blog posts. */
     progressBar: true,
     /** Show back-to-top button. */
@@ -388,7 +388,7 @@ export const site = {
   pages: {
     projects: {
       /** Description shown below the "projects" heading on the projects page. */
-      description: 'A growing collection of all my projects.',
+      description: 'These projects either sparked my passion for robotics and mechanical engineering, were especially enjoyable to work on, or both.',
     },
     teaching: {
       /** Description shown below the "teaching" heading on the teaching page. */
@@ -411,7 +411,7 @@ export const site = {
      * Set to 'auto' to use the built-in defaults (purple in light mode, cyan in dark mode).
      *
      * Example presets:
-     *   Purple (default): { light: '#b509ac', dark: '#2698ba' }
+     *   Purple (default): { light: '#b509ac', dark: '#ffaf1a' }
      *   Blue:             { light: '#0076df', dark: '#68c0d9' }
      *   Red:              { light: '#ff3636', dark: '#f29105' }
      *   Green:            { light: '#009f06', dark: '#b7d12a' }
