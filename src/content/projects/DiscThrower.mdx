@@ -1,0 +1,67 @@
+---
+title: Discthrower
+description: My 1st year engineering graduation project where we won the "Green Award" by using Topology optimization.
+importance: 4
+category: other
+img: /assets/img/DiscThrowerThumbnail.png
+---
+
+import PdfDownload from '@components/PdfDownload.astro';
+
+## Project Overview
+
+As part of a five-person Mechanical Engineering design project at TU Delft, we designed and built a precision disc thrower.
+The main challenge was controlling both the launch speed and spin of the disc in a repeatable way, while keeping the system adjustable and stable.
+
+## Design Approach
+
+Instead of immediately committing to one mechanism, the team first developed multiple concepts from different combinations of working principles. The concepts were compared using criteria such as but not limited to: precision, sustainability, adjustability, stability, cost.
+The selected concept used a spring-powered translating platform to launch the disc while a separately driven rotating platform generated spin. This allowed translational velocity and disc rotation to be controlled largely independently.
+During development, the original manually adjustable positioning system was replaced by as gimbal-baed system driven by stepper motors to improve repeatability.
+
+## My Contribution — Topology Optimization And Motorized Positioning
+
+My main individual engineering contribution was the topology optimization of the supporting structure.
+I used SOLIDWORKS topology studies to optimize how material could be removed while increasing structural stiffness. Loads were derived from the approximately 6 kg upper assembly and distributed across the mounting locations with additional margin.
+The optimization targeted a high stiffness-to-weight ratio. The resulting geometry retained material primarily along the load paths, allowing the support structure to use substantially less material than the original plate-based design.
+This work also influenced later design iterations, where unnecessary sheet-metal structures were reconsidered and replaced with more material-efficient geometries.
+
+My other individual engineering contribution was the integration of a motorized positioning mechanism.
+I designed a system consisting of an Arduino MEGA, 3 NEMA23 steppermotors, 3 TB6600 stepper motor drivers and a joystick to electronically control the disc thrower’s three positioning axes.
+
+## Engineering Decisions
+
+#### Independent Rotation and Translation
+
+A rotating platform driven by a motor was used to spin the disc before launch, while spring force provided its translational acceleration. Separating these functions made it possible to tune the flight characteristics more independently.
+
+#### Gimbal Positioning
+
+The original concept relied on adjustable support legs. Because this introduced instability and limited repeatability, the positioning mechanism was redesigned around a steppermotor-driven gimbal.
+
+#### Material Efficiency
+
+Material use was considered throughout the design. Topology optimization and redesign of the base reduced unnecessary structural material while increasing the stiffness.
+
+## Performance
+
+At the end of the project a big contest was held. During the contest, the designs of every group were assessed across several criteria. However due to large complexity and the limited time available, the prototype could be not tested sufficiently before the competition.
+As a result, the prototype did not perform as well as intended.
+
+## The Green Award
+
+Our continious consideration of material use throughout the project did not go unnoticed by the jury. Out of more than 100 groups, we won the _Green Award_, recognizing our design that as the most sustainable design of the competition.
+
+## Key Takaways
+
+The design offered significantly more adjustability than the simpler concepts considered earlier in the project, although this came at the cost of increased mechanical complexity.
+A major lesson from the project was that optimizing individual components is not enough: a well-functioning prototype requires all components to work effectively together.
+
+## Project Report
+
+The complete project report can be downloaded here:
+
+<PdfDownload
+  href="/assets/pdf/Precision_Disc_Thrower_Report.pdf"
+  label="Download Precision Disc Thrower report"
+/>

@@ -1,0 +1,32 @@
+---
+import { withBase } from '@utils/base';
+
+import IconFilePdf from '~icons/fa-solid/file-pdf';
+
+interface Props {
+  href: string;
+  label?: string;
+}
+
+const { href, label = 'Download PDF' } = Astro.props;
+---
+
+<a
+  href={withBase(href)}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={label}
+  title={label}
+  class="pdf-download"
+>
+  <span class="pdf-icon">
+    <IconFilePdf />
+  </span>
+</a>
+
+<style>
+  .pdf-icon :global(svg) {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+</style>
