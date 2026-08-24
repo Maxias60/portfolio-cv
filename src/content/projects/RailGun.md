@@ -68,8 +68,8 @@ In the end we ended up firing quite a large amount of projectiles without the ra
 
 <div align="center">
   <iframe
-    width="900"
-    height="506"
+    width="400"
+    height="200"
     src="https://www.youtube.com/embed/8z19iOmU5QY"
     title="Railgun Firing"
     frameborder="0"
