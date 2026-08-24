@@ -62,7 +62,8 @@
     "validate": "yarn test:all",
     "prepare": "husky",
     "citations:update": "node --strip-types scripts/update-citations.ts",
-    "prepushcheck": "yarn lint:ci && yarn build"
+    "prepushcheck": "yarn lint:ci && yarn build",
+    "autopush": "node scripts/autopush.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "7.2.4",
