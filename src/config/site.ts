@@ -50,7 +50,7 @@ export const site = {
     email: 'maxvanthart@gmail.com',
 
     /** Path to profile photo. Place image in public/assets/img/. */
-    avatar: '/assets/img/prof_pic.jpg',
+    avatar: '/assets/img/XBOXPFP.png',
 
     /**
      * Subtitle below your name on the about page.
