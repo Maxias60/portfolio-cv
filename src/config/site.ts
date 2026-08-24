@@ -421,9 +421,9 @@ export const site = {
      */
     color: {
       light: 'auto' as string,
-      dark: 'auto' as string,
+      dark: '#ffaf1a' as string,
       hoverLight: 'auto' as string,
-      hoverDark: 'auto' as string,
+      hoverDark: '#ffaf1a' as string,
     },
   },
 } as const;
