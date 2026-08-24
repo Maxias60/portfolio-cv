@@ -67,5 +67,13 @@ The high-current source was made by using two large capacitors connected in para
 In the end we ended up firing quite a large amount of projectiles without the railgun needing maintenance. The railgun, at times, managed to puncture the sandbag that we used as target. A video of a railgunshot can be seen below.
 
 <div align="center">
-  <iframe width="900" height="506" src="https://www.youtube.com/watch?v=8z19iOmU5QY" title="Railgun Firing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe
+    width="900"
+    height="506"
+    src="https://www.youtube.com/embed/8z19iOmU5QY"
+    title="Railgun Firing"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
 </div>
