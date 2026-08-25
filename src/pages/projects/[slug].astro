@@ -24,6 +24,8 @@ const {
   description,
   img,
   img_alt,
+  hero_width,
+  hero_max_height,
   url,
   github,
   giscus_comments,
@@ -128,6 +130,7 @@ const relatedEntries =
               alt={img_alt ?? title}
               loading="eager"
               class="img-fluid z-depth-1 rounded"
+              style={`max-width: ${hero_width}; max-height: ${hero_max_height ?? 'none'};`}
             />
           </div>
         )
@@ -293,12 +296,17 @@ const relatedEntries =
   /* ── Hero image ───────────────────────────────────────────────────────── */
   .project-hero {
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
   }
 
-  .img-fluid {
-    max-width: 100%;
+  .project-hero .img-fluid {
+    width: auto;
+    max-width: 500px;
+    max-height: 650px;
     height: auto;
     display: block;
+    object-fit: contain;
   }
 
   .rounded {

@@ -6,9 +6,12 @@ category: other
 img: /assets/img/GreenRocketTransparent.png
 img_fit: contain
 img_padding: 0rem
+hero_width: 450px
+hero_max_height: 600px
 ---
 
 import PdfDownload from '@components/PdfDownload.astro';
+import { withBase } from '@utils/base';
 
 ## Project Overview
 
@@ -32,7 +35,7 @@ However, this meant that we needed to determine the most efficient seeding path 
 <div style="display: flex; gap: 2rem; align-items: flex-start; justify-content: center;">
   <div style="flex: 1; text-align: center;">
     <img
-      src="/assets/img/GreenRocketNozzleTransparent.png"
+      src={withBase('/assets/img/GreenRocketNozzleTransparent.png')}
       alt="GreenRocket nozzle"
       style="max-width: 100%; height: 500px; object-fit: contain;"
     />
@@ -40,7 +43,7 @@ However, this meant that we needed to determine the most efficient seeding path 
 
   <div style="flex: 1; text-align: center;">
     <img
-      src="/assets/img/GreenRocketInjectionPattern.jpg"
+      src={withBase('/assets/img/GreenRocketInjectionPattern.jpg')}
       alt="GreenRocket injection pattern"
       style="max-width: 100%; height: 500px; object-fit: contain;"
     />

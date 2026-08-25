@@ -96,6 +96,12 @@ const projects = defineCollection({
     /** Optional padding around the thumbnail image, e.g. '2rem'. */
     img_padding: z.string().optional().default('0'),
 
+    /** Optional max width of the project hero image, e.g. '450px'. */
+    hero_width: z.string().optional().default('100%'),
+
+    /** Optional max height of the project hero image, e.g. '600px'. */
+    hero_max_height: z.string().optional(),
+
     /** External URL (e.g. GitHub repo). */
     url: z.string().url().optional(),
 

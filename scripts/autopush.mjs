@@ -10,7 +10,7 @@ if (!message) {
 
 try {
   console.log('\nRunning checks...\n');
-  execSync('yarn lint:ci', { stdio: 'inherit' });
+  execSync('yarn lint:ci --fix', { stdio: 'inherit' });
 
   console.log('\nBuilding site...\n');
   execSync('yarn build', { stdio: 'inherit' });
