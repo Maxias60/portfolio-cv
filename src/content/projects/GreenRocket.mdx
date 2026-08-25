@@ -1,0 +1,64 @@
+---
+title: GreenRocket
+description: A seed-planting robot made for a hackaton hosted by the Robot Student Association in Delft. This robot won the Hackaton!.
+importance: 1
+category: other
+img: /assets/img/GreenRocketTransparent.png
+img_fit: contain
+img_padding: 0rem
+---
+
+import PdfDownload from '@components/PdfDownload.astro';
+
+## Project Overview
+
+As part of a multidisciplinary project for the "Boskalis Hackathon" hosted by RSA, we were tasked with developing a seed-planting mechanism. 
+The mechanism needed to be able to place seeds into a layer of mud and was positioned by a pre-made gantry system. The task was revealed three days before the hackathon, and the prototype had to be built on the day of the hackathon itself.
+
+## Engineering Decisions
+
+#### Up-and-Down Movement of the "Pump" Structure
+The gantry system provided by the organizers of the hackathon only had two movement axes. The team chose to incorporate a third axis for pushing the nozzles into and out of the mud. 
+This third axis was driven by a closed-loop stepper motor in combination with a lead screw.
+
+#### Linear Actuator Driven Dual Pumping System
+Due to the need for high pumping pressure, a linear actuator in combination with syringe-style seed magazines was chosen. 
+This allowed the team to easily load the seeds into the machine while also being able to extend and retract the plungers during operation.
+
+#### Dual Nozzles
+To cancel out the reaction forces between the syringes and the linear actuator, the team chose to drive two syringes simultaneously using one linear actuator. This also directly doubled the prototype's seeding capability.
+However, this meant that we needed to determine the most efficient seeding path through the mud. This was done using a script that calculated the most efficient way to place circles of a certain size inside a box of a given size.
+
+<div style="display: flex; gap: 2rem; align-items: flex-start; justify-content: center;">
+  <div style="flex: 1; text-align: center;">
+    <img
+      src="/assets/img/GreenRocketNozzleTransparent.png"
+      alt="GreenRocket nozzle"
+      style="max-width: 100%; height: 500px; object-fit: contain;"
+    />
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <img
+      src="/assets/img/GreenRocketInjectionPattern.jpg"
+      alt="GreenRocket injection pattern"
+      style="max-width: 100%; height: 500px; object-fit: contain;"
+    />
+  </div>
+</div>
+
+#### My Contribution — Print-In-Place Autonomous Non-Electrical Self Closing And Opening Clog-Resistant Nozzle 
+My main individual engineering contribution to this design was the automatically reciprocating nozzle. 
+The nozzle consisted of an inner structure with a closing pin (shown in grey) and an outer structure that could move up and down (shown in red). 
+When the nozzle entered the mud, the outer structure moved relative to the inner structure, causing the closing pin to plug the nozzle and preventing mud from contaminating the seeds. 
+Once the correct depth was reached, the nozzle was lifted slightly. Due to the suction created by the mud, the outer structure moved upward, causing the nozzle to open. 
+The seeds were then extruded, after which the prototype raised the third axis and moved to the next position.
+
+## Performance
+Our design outperformed the competition, and we ended up winning the hackathon.
+
+#### Marketing Pitch Flyer Used During the Hackathon
+<PdfDownload
+  href="/assets/pdf/BrickedUp-GreenRocket.pdf"
+  label="Download Precision Disc Thrower report"
+/>
