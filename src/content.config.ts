@@ -83,24 +83,40 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
+
     /** Thumbnail image path. */
     img: z.string().optional(),
+
     /** Alt text for image. */
     img_alt: z.string().optional(),
+
+    /** How the thumbnail image should fit inside the card. */
+    img_fit: z.enum(['cover', 'contain']).optional().default('cover'),
+
+    /** Optional padding around the thumbnail image, e.g. '2rem'. */
+    img_padding: z.string().optional().default('0'),
+
     /** External URL (e.g. GitHub repo). */
     url: z.string().url().optional(),
+
     /** GitHub repo in format owner/repo — auto-links to repo. */
     github: z.string().optional(),
+
     /** GitHub repo path (owner/repo) for fetching live star count. */
     github_stars: z.string().optional(),
+
     /** Sort order (lower = shown first). */
     importance: z.number().optional().default(999),
+
     /** Badge label shown on card (e.g. 'open source'). */
     category: z.string().optional(),
+
     /** Show redirect to external url instead of project page. */
     redirect: z.string().url().optional(),
+
     /** Citation keys from papers.bib to show as References at the bottom of the project page. */
     related_publications: z.array(z.string()).optional(),
+
     /** Enable Giscus comments on the project page. */
     giscus_comments: z.boolean().optional().default(false),
   }),

@@ -27,6 +27,7 @@ const isExternal = !!project.data.redirect;
           width="400"
           height="200"
           class="card-img-top"
+          style={`object-fit: ${project.data.img_fit ?? 'cover'}; padding: ${project.data.img_padding ?? '0'};`}
         />
       )
     }
