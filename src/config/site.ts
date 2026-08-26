@@ -81,7 +81,7 @@ export const site = {
     email: 'maxvanthart@gmail.com',
     x_username: undefined as string | undefined,
     linkedin_username: 'max-van-t-hart-aa57a0219',
-    github_username: 'Maxias60',
+    github_username: 'maxvanthart',
     gitlab_username: undefined as string | undefined,
     /** Google Scholar user ID — the part after user= in your Scholar URL */
     scholar_userid: undefined as string | undefined,
