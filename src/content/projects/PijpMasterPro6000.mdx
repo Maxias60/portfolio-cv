@@ -1,0 +1,42 @@
+---
+title: PijpMasterPro6000
+description: A pipe-navigating robot made for the "underground" hackathon hosted by the Robot Student Association in Delft. The team placed second.
+importance: 2
+category: other
+img: /assets/img/1.jpg
+img_fit: cover
+img_padding: 0rem
+hero_width: 450px
+hero_max_height: 600px
+---
+
+import { withBase } from '@utils/base';
+import PdfDownload from '@components/PdfDownload.astro';
+import ModelViewer from '@components/ModelViewer.astro'; 
+
+
+## Project Overview
+
+As part of a multidisciplinary project for the "Underground Hackathon" hosted by RSA, we were tasked with developing a pipe-navigating robot. 
+The robot needed to be able to navigate a blind maze of vertical sewage pipes using a remote camera module. The task was revealed five days before the hackathon, and the prototype had to be built on the day of the hackathon itself.
+
+## Engineering Decisions
+
+#### 3-body Assembly
+The robot needed to be able to navigate through a vertical maze of pipes. This meant that the robot had to be able to take corners. The team designed a system consisting of 3 bodies. The front body contained the remote camera module that
+was issued to every competing group in the hackathon. The middle body contained an Arduino MEGA and a nrf module for remote control of the robot. The rear module contained a battery and the motordrivers.
+The bodies were connected to eachother via hinges that where driven by heavy duty 40Kg servomotors. This allowed the robot to be able to chose its own path forwards or backwards by positioning one of its bodies in a different direction.
+
+<ModelViewer
+  src="assets/models/PijpMaster.optimized.glb"
+  alt="PijpMaster robot"
+  height="500px"
+/>
+
+#### Extendable Wheelsets
+For enabling the robot to make turns and allow for good grip on the pipes, the front and rear bodies of the robot were given mechanicly extendable sets of wheels. 
+To reduce the overall weight of the robot as much as possible, it was chosen that the arms be driven by a single servomotor per set of wheels. 
+This was done by mounting the servomotor on one of the arms and connecting the arms to each other using herringbone gears. 
+
+## Performance
+Our design nearly outperformed the competition, and we ended up placing second in the hackathon.

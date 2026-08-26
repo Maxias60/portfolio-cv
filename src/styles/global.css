@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source("../");
 @import './_colors.css';
 @import './_typography.css';
 /* KaTeX math CSS — bundled locally so it's always available (no CDN dependency) */
