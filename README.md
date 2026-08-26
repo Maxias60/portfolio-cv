@@ -342,3 +342,5 @@ as-folio began as an Astro reimplementation of the [al-folio](https://github.com
 ## License
 
 MIT © [Dadang NH](https://github.com/dadangnh)
+
+<!-- workflow trigger test -->
