@@ -6,24 +6,12 @@ category: Favorites
 img: /assets/img/Railgun-MidShot.jpg
 ---
 
+import PdfDownload from '@components/PdfDownload.astro';
+import { withBase } from '@utils/base';
+
 ## Backstory
 
 I've been intrigued by machines that launch projectiles from an early age. My passion started in my childhood with crafting simple bows and arrows, which quickly evolved into building crossbows and spring-loaded contraptions. Over time, my projects grew more complex, moving from aerosol cannons and pneumatic systems to ultimately designing a railgun. The railgun worked by simultaneously forcing a high current and a strong magnetic field onto a projectile to create a large Lorentz force, propelling the projectile forward. The high-current source consisted of two parallel heavy-duty capacitors that were charged up to 400v.
-
-<!-- <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" alt="Special relativity visualization" loading="lazy" />
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" alt="Spacetime diagram" loading="lazy" />
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" alt="Lorentz transformation" loading="lazy" />
-    </div>
-</div>
-<div class="caption">
-    Visualizations of spacetime, Lorentz transformations, and relativistic phenomena that underpin the Special Theory of Relativity.
-</div> -->
 
 ## Technical Specifications & Components
 
@@ -62,6 +50,21 @@ The projectiles were made by cutting a metal plate in "strips" and folding them 
 
 The high-current source was made by using two large capacitors connected in parallel using metal busbars. This capacitor bank was charged by a DC-DC high-voltage booster connected to an old laptop charger. Also a voltage reader was connected to the bank for charging to a specific voltage. In the early stages of the project the controlling of the charged voltage was done by turning the laptop charger on and off. Later this was automated by using an arduino, a voltage divider and relays to prevent self-discharge of the capacitors during experiments.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img src="/assets/img/Railgun_design.png" class="img-fluid rounded z-depth-1" alt="railgun design" loading="lazy" />
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img src="/assets/img/Railgun_design_boven.png" class="img-fluid rounded z-depth-1" alt="railgun design topdown" loading="lazy" />
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img src="/assets/img/Railgun_circuit.png" class="img-fluid rounded z-depth-1" alt="railgun circuit" loading="lazy" />
+    </div>
+</div>
+<div class="caption">
+    Visualizations of the railgun design and a simple circuit diagram.
+</div>
+
 ## Results
 
 In the end we ended up firing quite a large amount of projectiles without the railgun needing maintenance. The railgun, at times, managed to puncture the sandbag that we used as target. A video of a railgunshot can be seen below.
@@ -77,3 +80,10 @@ In the end we ended up firing quite a large amount of projectiles without the ra
     allowfullscreen
   ></iframe>
 </div>
+
+#### Old Report Download
+The old report can be downloaded below.
+<PdfDownload
+  href="/assets/pdf/PWS_Railgun_2020_Fedde&Max_Versie_final.docx.pdf"
+  label="Download Railgun report"
+/>
