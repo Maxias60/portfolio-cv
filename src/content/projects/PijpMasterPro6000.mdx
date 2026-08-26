@@ -3,8 +3,8 @@ title: PijpMasterPro6000
 description: A pipe-navigating robot made for the "underground" hackathon hosted by the Robot Student Association in Delft. The team placed second.
 importance: 2
 category: other
-img: /assets/img/1.jpg
-img_fit: cover
+img: /assets/img/PijpMasterInContextTB.png
+img_fit: contain
 img_padding: 0rem
 hero_width: 450px
 hero_max_height: 600px
@@ -17,26 +17,80 @@ import ModelViewer from '@components/ModelViewer.astro';
 
 ## Project Overview
 
-As part of a multidisciplinary project for the "Underground Hackathon" hosted by RSA, we were tasked with developing a pipe-navigating robot. 
-The robot needed to be able to navigate a blind maze of vertical sewage pipes using a remote camera module. The task was revealed five days before the hackathon, and the prototype had to be built on the day of the hackathon itself.
+As part of a multidisciplinary project for the Underground Hackathon hosted by RSA, we were tasked with developing a robot capable of navigating through pipes. 
+The robot had to navigate a blind maze of vertical sewage pipes using a remote camera module. The task was revealed five days before the hackathon, while the prototype had to be built on the day of the hackathon itself.
+
+<ModelViewer
+  src="/assets/models/PijpMaster.optimized.glb"
+  alt="PijpMaster robot"
+  height="500px"
+  shadowIntensity={2}
+  shadowSoftness={0}
+  cameraOrbit="63.51deg 72.32deg 1.189m"
+  fieldOfView="26.26deg"
+  exposure={0.7}
+  environmentImage="legacy"
+  toneMapping="neutral"
+  hotspots={[
+    {
+      slot: "hotspot-1",
+      position: "0.0981748084553306m 0.10372335185967206m 0.12931666176961937m",
+      normal: "-0.8294673601084651m -1.0152156731725792e-14m 0.5585551884233948m",
+      label: "Extended Wheelset"
+    },
+    {
+      slot: "hotspot-2",
+      position: "-0.04097508980899447m 0.08427605688407691m -0.3622491239773346m",
+      normal: "-0.2937775994863167m -0.07124704998787729m -0.9532148655513523m",
+      label: "Retracted Wheelset"
+    },
+    {
+      slot: "hotspot-3",
+      position: "0.10939434819144297m 0.02411325683162971m 0.1621879817181819m",
+      normal: "0.5585551884233946m 6.945658278412156e-16m 0.8294673601084653m",
+      label: "Camera Module of Front Body"
+    },
+    {
+      slot: "hotspot-4",
+      position: "0.04130827116944923m 0.048918651864911435m 0.05997502868587137m",
+      normal: "0.33725664662867266m 0.7971344628749203m 0.5008339070010088m",
+      label: "Herringbone Gear"
+    },
+    {
+      slot: "hotspot-5",
+      position: "0.006045835229422494m 0.0252118573343797m -0.2180060627873628m",
+      normal: "0.9556434423932608m 6.243546868349799e-16m -0.29452607865986735m",
+      label: "40Kg Servomotor"
+    },
+    {
+      slot: "hotspot-6",
+      position: "-0.0005632822913350793m 0.06699562146686713m -0.1045282084931324m",
+      normal: "0m 1m 7.888609052210122e-31m",
+      label: "Middle Body"
+    },
+    {
+      slot: "hotspot-7",
+      position: "-0.058288917179760875m 0.022795710939714345m -0.3933643658235719m",
+      normal: "-0.29452607865986735m -1.2166649284531906e-16m -0.9556434423932609m",
+      label: "Rear Body"
+    }
+  ]}
+/>
 
 ## Engineering Decisions
 
 #### 3-body Assembly
-The robot needed to be able to navigate through a vertical maze of pipes. This meant that the robot had to be able to take corners. The team designed a system consisting of 3 bodies. The front body contained the remote camera module that
-was issued to every competing group in the hackathon. The middle body contained an Arduino MEGA and a nrf module for remote control of the robot. The rear module contained a battery and the motordrivers.
-The bodies were connected to eachother via hinges that where driven by heavy duty 40Kg servomotors. This allowed the robot to be able to chose its own path forwards or backwards by positioning one of its bodies in a different direction.
-
-<ModelViewer
-  src="assets/models/PijpMaster.optimized.glb"
-  alt="PijpMaster robot"
-  height="500px"
-/>
+The robot needed to be able to navigate through a vertical maze of pipes, which required the robot to be able to take corners. 
+The team designed a system consisting of 3 bodies. The front body contained the remote camera module issued to every competing team. 
+The middle body housed an Arduino Mega and an nRF module for remote control, while the rear body contained the battery and motor drivers.
+The bodies were connected to eachother via hinges that where actuated by heavy-duty 40Kg servomotors.
+By positioning one body in a different direction, the robot could actively choose its path through a junction while moving either forwards or backwards.
 
 #### Extendable Wheelsets
-For enabling the robot to make turns and allow for good grip on the pipes, the front and rear bodies of the robot were given mechanicly extendable sets of wheels. 
-To reduce the overall weight of the robot as much as possible, it was chosen that the arms be driven by a single servomotor per set of wheels. 
-This was done by mounting the servomotor on one of the arms and connecting the arms to each other using herringbone gears. 
+To provide sufficient grip while also allowing the robot to negotiate turns, the front and rear bodies were equipped with mechanically extendable wheelsets.
+To minimise the overall weight and complexity of the robot, each wheelset was actuated by a single servomotor.
+The servomotor was mounted directly to one of the wheel arms, while the opposing arm was synchronised using a pair of herringbone gears. 
+This allowed both sides of the wheelset to extend and retract simultaneously using a single actuator.
 
 ## Performance
-Our design nearly outperformed the competition, and we ended up placing second in the hackathon.
+Our design nearly outperformed the competition and ultimately placed second in the hackathon.

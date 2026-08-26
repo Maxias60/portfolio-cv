@@ -1,13 +1,61 @@
 ---
+interface Hotspot {
+  slot: string;
+  position: string;
+  normal: string;
+  label: string;
+}
+
 interface Props {
   src: string;
   alt?: string;
   height?: string;
+  hotspots?: Hotspot[];
+
+  shadowIntensity?: number;
+  shadowSoftness?: number;
+
+  cameraOrbit?: string;
+  fieldOfView?: string;
+
+  exposure?: number;
+  environmentImage?: string;
+  toneMapping?: string;
+
+  autoRotate?: boolean;
 }
 
-const { src, alt = '3D model', height = '400px' } = Astro.props;
+const {
+  src,
+  alt = '3D model',
+  height = '400px',
+  hotspots = [],
 
-const modelPath = src.startsWith('http') ? src : `${import.meta.env.BASE_URL}${src}`;
+  shadowIntensity = 1,
+  shadowSoftness = 1,
+
+  cameraOrbit,
+  fieldOfView,
+
+  exposure = 1,
+  environmentImage,
+  toneMapping = 'neutral',
+
+  autoRotate = true,
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const cleanSrc = src
+  .replace(/^\/public\//, '')
+  .replace(/^public\//, '')
+  .replace(/^\//, '');
+
+const modelPath = src.startsWith('http') ? src : `${base}${cleanSrc}`;
+
+const hasHotspots = hotspots.length > 0;
 ---
 
 <script
@@ -15,23 +63,171 @@ const modelPath = src.startsWith('http') ? src : `${import.meta.env.BASE_URL}${s
   src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
   is:inline></script>
 
+<script is:inline>
+  customElements.whenDefined('model-viewer').then(() => {
+    customElements.get('model-viewer').meshoptDecoderLocation =
+      'https://cdn.jsdelivr.net/npm/meshoptimizer/meshopt_decoder.js';
+  });
+</script>
+
 <div class="model-viewer-wrapper">
-  <model-viewer src={modelPath} alt={alt} ar camera-controls auto-rotate touch-action="pan-y">
+  <model-viewer
+    src={modelPath}
+    alt={alt}
+    camera-controls
+    auto-rotate={autoRotate}
+    interpolation-decay="150"
+    shadow-intensity={shadowIntensity}
+    shadow-softness={shadowSoftness}
+    camera-orbit={cameraOrbit}
+    field-of-view={fieldOfView}
+    exposure={exposure}
+    environment-image={environmentImage}
+    tone-mapping={toneMapping}
+    touch-action="pan-y"
+  >
+    {
+      hotspots.map((hotspot) => (
+        <button
+          class="Hotspot"
+          slot={hotspot.slot}
+          data-position={hotspot.position}
+          data-normal={hotspot.normal}
+          data-visibility-attribute="visible"
+          type="button"
+        >
+          <div class="HotspotAnnotation">{hotspot.label}</div>
+        </button>
+      ))
+    }
   </model-viewer>
+
+  {
+    hasHotspots && (
+      <button class="label-toggle" type="button" aria-label="Hide model labels">
+        Hide model labels
+      </button>
+    )
+  }
 </div>
+
+<script is:inline>
+  document.querySelectorAll('.model-viewer-wrapper').forEach((wrapper) => {
+    const viewer = wrapper.querySelector('model-viewer');
+    const toggle = wrapper.querySelector('.label-toggle');
+
+    /*
+     * Hide / show model labels
+     */
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const hidden = wrapper.classList.toggle('labels-hidden');
+
+        toggle.textContent = hidden ? 'Show model labels' : 'Hide model labels';
+
+        toggle.setAttribute('aria-label', hidden ? 'Show model labels' : 'Hide model labels');
+      });
+    }
+
+    /*
+     * Focus camera on clicked hotspot
+     */
+    if (viewer) {
+      viewer.querySelectorAll('.Hotspot').forEach((hotspot) => {
+        hotspot.addEventListener('click', (event) => {
+          event.stopPropagation();
+
+          const position = hotspot.dataset.position;
+
+          if (!position) return;
+
+          viewer.cameraTarget = position;
+          viewer.cameraOrbit = 'auto auto 0.55m';
+        });
+      });
+    }
+  });
+</script>
 
 <style define:vars={{ height }}>
   .model-viewer-wrapper {
+    position: relative;
+
     width: 100%;
     height: var(--height);
+
     margin: 2rem 0;
+
     border-radius: 8px;
     overflow: hidden;
-    background-color: #f5f5f5;
+
+    background-color: var(--global-bg-color);
   }
 
   model-viewer {
     width: 100%;
     height: 100%;
+
+    background-color: transparent;
+  }
+
+  .label-toggle {
+    position: absolute;
+
+    top: 1rem;
+    right: 1rem;
+
+    z-index: 10;
+
+    padding: 0.4rem 0.7rem;
+
+    background: var(--global-card-bg-color);
+    color: var(--global-text-color);
+
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 0.8rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  :global(.Hotspot) {
+    --min-hotspot-opacity: 0;
+
+    padding: 0.35rem 0.55rem;
+
+    background: var(--global-card-bg-color);
+    color: var(--global-text-color);
+
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 0.75rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    transition:
+      opacity 0.15s ease,
+      transform 0.15s ease;
+  }
+
+  :global(.Hotspot:not([data-visible])) {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  :global(.HotspotAnnotation) {
+    white-space: nowrap;
+  }
+
+  :global(.labels-hidden .Hotspot) {
+    display: none;
   }
 </style>
