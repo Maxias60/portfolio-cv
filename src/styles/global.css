@@ -1,4 +1,4 @@
-@import 'tailwindcss' source("../");
+@import 'tailwindcss' source('../');
 @import './_colors.css';
 @import './_typography.css';
 /* KaTeX math CSS — bundled locally so it's always available (no CDN dependency) */
@@ -1395,5 +1395,82 @@ body[data-tooltips] [data-tooltip]:focus-within::before {
   blockquote,
   figure {
     page-break-inside: avoid;
+  }
+
+  /* Project card stuff */
+  .graduation-project-card {
+    display: block;
+    width: 290px;
+    margin: 2rem 0;
+
+    background: var(--global-card-bg-color);
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    border: 1px solid var(--global-divider-color);
+    border-radius: 5px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .graduation-project-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--global-theme-color);
+  }
+
+  .graduation-project-card-image {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+  }
+
+  .graduation-project-card-content {
+    padding: 1.25rem;
+  }
+
+  .graduation-project-card-label {
+    margin-bottom: 0.7rem;
+
+    color: var(--global-theme-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .graduation-project-card h3 {
+    margin: 0 0 0.7rem;
+
+    color: var(--global-theme-color);
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  .graduation-project-card p {
+    margin: 0;
+
+    color: var(--global-text-color);
+    font-size: 0.9rem;
+    line-height: 1.55;
+
+    opacity: 0.75;
+  }
+
+  .lab-project-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .lab-project-links > * {
+    flex: 1 1 0;
+    min-width: 0;
   }
 }

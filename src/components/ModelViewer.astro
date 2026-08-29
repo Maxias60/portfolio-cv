@@ -23,6 +23,9 @@ interface Props {
   toneMapping?: string;
 
   autoRotate?: boolean;
+
+  interactionPrompt?: 'auto' | 'none';
+  interactionPromptThreshold?: number;
 }
 
 const {
@@ -42,6 +45,9 @@ const {
   toneMapping = 'neutral',
 
   autoRotate = true,
+
+  interactionPrompt = 'auto',
+  interactionPromptThreshold = 3000,
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.endsWith('/')
@@ -75,7 +81,9 @@ const hasHotspots = hotspots.length > 0;
     src={modelPath}
     alt={alt}
     camera-controls
-    auto-rotate={autoRotate}
+    {...autoRotate ? { 'auto-rotate': '' } : {}}
+    interaction-prompt={interactionPrompt}
+    interaction-prompt-threshold={interactionPromptThreshold}
     interpolation-decay="150"
     shadow-intensity={shadowIntensity}
     shadow-softness={shadowSoftness}

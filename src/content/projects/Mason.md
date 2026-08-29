@@ -1,7 +1,7 @@
 ---
 title: Mason
 description: A jointing robot that was made in collaboration with SMB-Geveltechniek as part of the Robotics Minor of TU Delft.
-importance: 4
+importance: 5
 category: Favorites
 img: /assets/img/1.jpg
 ---
