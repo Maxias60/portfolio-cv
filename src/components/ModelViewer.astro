@@ -16,6 +16,7 @@ interface Props {
   shadowSoftness?: number;
 
   cameraOrbit?: string;
+  cameraTarget?: string;
   fieldOfView?: string;
 
   exposure?: number;
@@ -38,6 +39,7 @@ const {
   shadowSoftness = 1,
 
   cameraOrbit,
+  cameraTarget,
   fieldOfView,
 
   exposure = 1,
@@ -88,6 +90,7 @@ const hasHotspots = hotspots.length > 0;
     shadow-intensity={shadowIntensity}
     shadow-softness={shadowSoftness}
     camera-orbit={cameraOrbit}
+    camera-target={cameraTarget}
     field-of-view={fieldOfView}
     exposure={exposure}
     environment-image={environmentImage}
