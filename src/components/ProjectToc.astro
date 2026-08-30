@@ -147,11 +147,11 @@ const { title } = Astro.props;
       return;
     }
 
-    const cardTitles = new Set([
-      'Graduation Project Documentation',
-      'MIRTE Master Documentation',
-      'Interactive CAD Model',
-    ]);
+    function isCardHeading(id: string) {
+      const heading = document.getElementById(id);
+
+      return heading?.classList.contains('card-title') ?? false;
+    }
 
     const tree: TocNode[] = [];
     const stack: Array<{ level: number; children: TocNode[] }> = [{ level: 0, children: tree }];
@@ -180,7 +180,7 @@ const { title } = Astro.props;
 
         item.classList.add('toc-item', `toc-level-${node.level}`);
 
-        if (cardTitles.has(node.text)) {
+        if (isCardHeading(node.id)) {
           item.classList.add('toc-card-item');
         }
 
@@ -211,7 +211,7 @@ const { title } = Astro.props;
 
         item.classList.add('mobile-menu-item', `mobile-menu-level-${node.level}`);
 
-        if (cardTitles.has(node.text)) {
+        if (isCardHeading(node.id)) {
           item.classList.add('mobile-menu-card-item');
         }
 
