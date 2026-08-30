@@ -1474,3 +1474,17 @@ body[data-tooltips] [data-tooltip]:focus-within::before {
     min-width: 0;
   }
 }
+@media (max-width: 1350px) {
+  html,
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
