@@ -9,6 +9,7 @@ img_padding: 0rem
 ---
 
 import PdfDownload from '@components/PdfDownload.astro';
+import { withBase } from '@utils/base';
 
 ## Project Overview
 
@@ -63,7 +64,7 @@ A major lesson from the project was that optimizing individual components is not
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
     <img
-      src="/assets/img/TeamPictureGreenAwardWOP1.jpeg"
+      src={withBase("/assets/img/TeamPictureGreenAwardWOP1.jpeg")}
       class="img-fluid rounded z-depth-1"
       alt="GreenRocket mounted on gantry"
       loading="lazy"
@@ -73,7 +74,7 @@ A major lesson from the project was that optimizing individual components is not
 
   <div class="col-sm mt-3 mt-md-0">
     <img
-      src="/assets/img/TeamPictureWOP1.jpeg"
+      src={withBase("/assets/img/TeamPictureWOP1.jpeg")}
       class="img-fluid rounded z-depth-1"
       alt="GreenRocket team"
       loading="lazy"
