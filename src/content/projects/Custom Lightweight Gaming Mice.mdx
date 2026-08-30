@@ -1,0 +1,280 @@
+---
+title: Custom Lightweight Gaming Mice
+description: An ongoing journey with modifying top-tier gaming mice to reduce their weight drasticly. These designs are being sold online on my Cults3D profile for others to 3D-print and enjoy.
+importance: 2
+category: Favorites
+img: /assets/img/RVV4P_side.png
+img_fit: cover
+img_padding: 0rem
+
+---
+
+import ExternalProjectCard from '@components/ExternalProjectCard.astro';
+import ExternalProjectCardGrid from '@components/ExternalProjectCardGrid.astro';
+import ModelViewer from '@components/ModelViewer.astro';
+import PdfDownload from '@components/PdfDownload.astro';
+import { withBase } from '@utils/base';
+
+## Project Description
+
+My interest in lightweight gaming mice started around six years ago, when I first modified a Logitech G305 Lightspeed. Since then, I have continued experimenting with mouse hardware, weight reduction and custom shells.
+When the Razer Viper V2 Pro became one of the strongest gaming mice on the market, I bought it for its sensor performance, low weight and high polling rate. Later, Finalmouse released the ULX series. I liked the shape and extremely low weight, but rather than replacing an already high-end mouse, I decided to redesign the Viper V2 Pro around the electronics I already had.
+That first conversion became the starting point for an ongoing series of lightweight gaming mouse designs. 
+Over several generations, I developed new shells for the Viper V2 Pro, Viper V3 Pro and Viper V4 Pro, while retaining the original electronics and progressively improving weight, stiffness, assembly, click feel and manufacturability.
+The project has since grown from a personal modification into a small collection of finished designs that I sell through my Cults3D profile for others to 3D-print and assemble themselves.
+
+---
+
+*To protect intellectual property, 3D models will not be shown for this project.*
+
+---
+
+## Design Evolution
+
+### Viper V2 Pro — ULX Lion
+The first complete conversion was designed around the internals of the Razer Viper V2 Pro and the external shape of the Finalmouse ULX Lion.
+This project was my first extensive use of surface modelling. The external geometry was reverse engineered from a 3D scan and reconstructed into a clean CAD surface model.
+The first iteration already provided a close approximation of the reference shape, while the second iteration reached approximately **99% geometric accuracy** after refining the scan alignment and surface definition. This refined
+second-generation shell geometry was then used as the basis for the later mouse projects.
+The first design consisted of two printed components and achieved a fully assembled weight of approximately **38.5 grams**, using the complete stock electronics and PLA+, compared to the original **58-gram** Viper V2 Pro.
+A later revision changed the internal architecture to a separate structural frame and outer shell. This simplified assembly, slightly reduced weight, and improved the surface quality of the printed housing.
+
+<div class="row">
+  <div class="col-sm mt-md-0 mt-3">
+    <img
+      src="/assets/img/RVV2P_thumbnail.png"
+      class="img-fluid z-depth-1 rounded"
+      alt="Razer Viper V2 Pro"
+      loading="lazy"
+    />
+  </div>
+  <div class="col-sm mt-md-0 mt-3">
+    <img
+      src="/assets/img/RVV2P_exploded.png"
+      class="img-fluid z-depth-1 rounded"
+      alt="Razer Viper V2 Pro"
+      loading="lazy"
+    />
+  </div>
+  <div class="col-sm mt-md-0 mt-3">
+    <img
+      src="/assets/img/RVV2P_side.png"
+      class="img-fluid z-depth-1 rounded"
+      alt="Razer Viper V2 Pro"
+      loading="lazy"
+    />
+  </div>
+</div>
+<div class="caption">Renders from the Viper V2 Pro — ULX Lion product page.</div>
+
+### Viper V3 Pro — ULX Lion
+For the next generation, I redesigned the concept around the Viper V3 Pro.
+Rather than adapting the previous architecture, the housing was redesigned to integrate the required structure into a **single printed shell**, 
+reducing the assembled weight to approximately **36 grams** compared to the stock weight of **54 grams**.
+
+<div style="display: flex; gap: 1rem; align-items: stretch; justify-content: center;">
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/RVV3PL_side.png')}
+      alt="Razer Viper V3 Pro side view"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px;"
+    />
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/RVV3PL_exploded.png')}
+      alt="Razer Viper V3 Pro exploded view"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px;"
+    />
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/RVV3PL_irl.jpg')}
+      alt="Razer Viper V3 Pro printed mouse"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px;"
+    />
+  </div>
+</div>
+
+<div class="caption">
+  Renders and prototype of the Viper V3 Pro — ULX Lion conversion.
+</div>
+
+### Viper V3 Pro — ULX Tiger
+The third major design represented a more fundamental revision of both the shell architecture and my design methodology.
+The larger ULX Tiger geometry was combined with the Viper V3 Pro electronics while still achieving a weight below **36 grams**. 
+This made the final design lighter than the 38-gram Finalmouse ULX Tiger it was based on, despite retaining the stock Viper V3 Pro electronics.
+Despite the larger shell, the design became easier to assemble, easier to manufacture and structurally more refined.
+A significant amount of development focused on the main mouse buttons. Their geometry was iterated to improve stiffness, left-right consistency, pre-tension and pre-travel.
+Later generations introduced an adjustable pre-tension mechanism, allowing the click behaviour to be tuned mechanically after assembly.
+Grip templates were also developed so that universal grip tape could be cut accurately to the shell geometry.
+
+<div class="row">
+  <div class="col-sm mt-md-0 mt-3">
+    <img
+      src="/assets/img/RVV3PT_thumbnail.png"
+      class="img-fluid z-depth-1 rounded"
+      alt="Razer Viper V3 Pro"
+      loading="lazy"
+    />
+  </div>
+  <div class="col-sm mt-md-0 mt-3">
+    <img
+      src="/assets/img/RVV3PT_exploded.png"
+      class="img-fluid z-depth-1 rounded"
+      alt="Razer Viper V3 Pro"
+      loading="lazy"
+    />
+  </div>
+  <div class="col-sm mt-md-0 mt-3">
+    <img
+      src="/assets/img/RVV3PT_side.png"
+      class="img-fluid z-depth-1 rounded"
+      alt="Razer Viper V3 Pro"
+      loading="lazy"
+    />
+  </div>
+</div>
+<div class="caption">Renders from the Viper V3 Pro — ULX Tiger product page.</div>
+
+### Viper V4 Pro — ULX Tiger
+The latest design adapts the developed architecture to the Razer Viper V4 Pro.
+At **34 grams fully assembled**, it is currently the lightest mouse in the series while still retaining the complete stock electronics and still being printed out of standard PLA+.
+The weight could be further reduced to **30.7 grams** by printing it out of nylon using SLS or MJF technology.
+By this stage, many features developed throughout the earlier projects had become part of a reusable design approach, including:
+
+- adjustable main-button pre-travel
+- grip templates
+- multiple shell weight-saving pattern configurations
+- FDM-oriented geometry
+- preconfigured 3MF files for manufacturing
+- improved structural reinforcement
+- consideration for alternative manufacturing methods such as resin printing, MJF printing and SLS printing.
+
+<div class="row">
+  <div class="col-sm mt-md-0 mt-3">
+    <img
+      src="/assets/img/RVV4P_thumbnail.png"
+      class="img-fluid z-depth-1 rounded"
+      alt="Razer Viper V4 Pro"
+      loading="lazy"
+    />
+  </div>
+  <div class="col-sm mt-md-0 mt-3">
+    <img
+      src="/assets/img/RVV4P_exploded.png"
+      class="img-fluid z-depth-1 rounded"
+      alt="Razer Viper V4 Pro"
+      loading="lazy"
+    />
+  </div>
+  <div class="col-sm mt-md-0 mt-3">
+    <img
+      src="/assets/img/RVV4P_side.png"
+      class="img-fluid z-depth-1 rounded"
+      alt="Razer Viper V4 Pro"
+      loading="lazy"
+    />
+  </div>
+</div>
+<div class="caption">Renders from the Viper V4 Pro — ULX Tiger product page.</div>
+
+## Engineering Approach
+
+A recurring challenge throughout the project was reducing mass without compromising stiffness, assembly quality, or mouse feel.
+For each generation, material was removed primarily from low-load regions while areas surrounding the PCB mounts, mouse buttons, grip surfaces and structural connections were reinforced.
+Physical prototypes were essential. 
+Small changes in geometry could noticeably affect shell flex, click force, pre-travel and print reliability. 
+Each mouse therefore went through repeated cycles of CAD modification, printing, assembly and testing.
+Another important constraint was manufacturability. 
+The designs were intentionally developed so that they could be produced using conventional FDM printers and commonly available materials rather than requiring industrial manufacturing processes.
+
+## Selling Designs
+The designs are sold through my Cults3D profile, which added a practical product-development aspect to the project.
+Besides designing and testing the mice, I also create the product documentation, prepare the printable files and provide support to customers who build the designs themselves.
+Customer feedback has been useful during development. Questions about printing, assembly, tolerances and compatibility helped identify areas where the design or documentation could be improved.
+For some customers I also provide small customisations, such as alternative weight-saving patterns or adjustments for specific printing preferences.
+This has made the project a combination of engineering, product documentation and customer support rather than only a personal design exercise.
+
+## Result
+The project developed from a single personal mouse modification into a small family of engineered conversion shells spanning multiple hardware generations.
+The designs are now sold online and are being printed and assembled by other users, which provided an additional validation of their manufacturability and usability outside my own setup.
+The project became a long-term exercise in **surface modelling, reverse engineering, lightweight structural design, tolerance management, design for additive manufacturing and technical customer support**.
+
+<div style="display: flex; gap: 1rem; align-items: stretch; justify-content: center;">
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/RVV2P_weight.jpeg')}
+      alt="Razer Viper V3 Pro side view"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px;"
+    />
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/RVV3PL_weight.jpg')}
+      alt="Razer Viper V3 Pro exploded view"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px;"
+    />
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/RVV3PT_weight.jpg')}
+      alt="Razer Viper V3 Pro printed mouse"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px;"
+    />
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/RVV4P_weight.jpeg')}
+      alt="Razer Viper V3 Pro printed mouse"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px;"
+    />
+  </div>
+</div>
+
+<div class="caption">
+  Renders and prototype of the Viper V3 Pro — ULX Lion conversion.
+</div>
+
+<ExternalProjectCardGrid>
+  <ExternalProjectCard
+    title="Viper V2 Pro to Finalmouse ULX Lion conversion"
+    description="Product page of the Viper V2 Pro — ULX Lion design"
+    img="/assets/img/RVV2P_thumbnail.png"
+    imgAlt="Cults Razer Viper V2 Pro"
+    href="https://cults3d.com/en/3d-model/gadget/38-5g-viper-v2-pro-to-finalmouse-ulx-lion-coversion-maxias"
+  />
+
+  <ExternalProjectCard
+    title="Viper V3 Pro to Finalmouse ULX Tiger conversion"
+    description="Product page of the Viper V3 Pro — ULX Tiger design"
+    img="/assets/img/RVV3PT_thumbnail.png"
+    imgAlt="Cults Razer Viper V3 Pro"
+    href="https://cults3d.com/en/3d-model/gadget/36-gram-viper-v3-pro-finalmouse-ulx-tiger-weight-reduction-mod"
+  />
+
+  <ExternalProjectCard
+    title="Viper V4 Pro to Finalmouse ULX Tiger conversion"
+    description="Product page of the Viper V4 Pro — ULX Tiger"
+    img="/assets/img/RVV4P_thumbnail.png"
+    imgAlt="Cults Razer Viper V4 Pro"
+    href="https://cults3d.com/en/3d-model/gadget/34-gram-viper-v4-pro-finalmouse-ulx-tiger-weight-reduction-mod"
+  />
+</ExternalProjectCardGrid>
+
+<ExternalProjectCardGrid>
+  <ExternalProjectCard
+    title="Cults3D"
+    description="A collection of my custom 3D-printable designs and modification kits"
+    img="/assets/img/cults-seeklogo.svg"
+    imgAlt="Preview of my Cults3D profile and 3D models"
+    href="https://cults3d.com/en/users/Maxias/3d-models"
+    imgFit="contain"
+    imgPadding="2rem"
+  />
+</ExternalProjectCardGrid>
