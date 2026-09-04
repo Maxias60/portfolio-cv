@@ -3,8 +3,15 @@ title: SLIP
 description: A multidisciplinary project in which a custom high-power unmanned ground vehicle was designed and built for heavy payloads, harsh terrain and autonomous robotics research. Developed at RoBoHouse Delft in collaboration with SUSAG.
 importance: 3
 category: Favorites
-img: /assets/img/1.jpg
+img: /assets/img/SLIP-hero.jpg
 ---
+
+import ExternalProjectCard from '@components/ExternalProjectCard.astro';
+import ExternalProjectCardGrid from '@components/ExternalProjectCardGrid.astro';
+import ModelViewer from '@components/ModelViewer.astro';
+import PdfDownload from '@components/PdfDownload.astro';
+import VideoScroll from '@components/VideoScroll.astro';
+import { withBase } from '@utils/base';
 
 ## Project description
 
@@ -34,6 +41,21 @@ The frame architecture was deliberately kept modular. Rather than designing the 
 the aluminium profile construction made it easier to reposition components, modify the platform and access internal hardware during development.
 At the centre of the chassis sits a custom **41.6 V, 50 Ah LiFePO4 battery pack**, around which the drivetrain, computing hardware, sensors and electronics were packaged.
 The exterior of the frame was enclosed using **3 mm aluminium panels** combined with custom 3D-printed panels for mounting sensors, switches and other hardware.
+
+<video
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  style="width: 100%; border-radius: 6px;"
+>
+  <source
+    src={withBase('/assets/vids/Full-assembly-animation-cropped.mp4')}
+    type="video/mp4"
+  />
+  Your browser does not support the video tag.
+</video>
 
 ### High-torque drive units
 
@@ -66,9 +88,20 @@ This was important because the platform was intended to support additional equip
 The gearbox was mounted to three custom stainless-steel plates, which also supported the BLDC motor and motor controller inside the chassis. 
 These plates were then mounted directly to the aluminium frame to provide a rigid structural connection between the drivetrain and the chassis.
 
-***
-Video Gearbox
-***
+<video
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  style="width: 100%; border-radius: 6px;"
+>
+  <source
+    src={withBase('/assets/vids/wheel-assembly.mp4')}
+    type="video/mp4"
+  />
+  Your browser does not support the video tag.
+</video>
 
 ### Motor control and odometry
 
@@ -97,9 +130,31 @@ The battery enclosure was designed specifically around the prismatic cells and i
 A high-current relay provides a hardware-level method of disconnecting the drivetrain from the battery. 
 The emergency stop on the top panel directly controls this relay, providing a physical shutdown mechanism independent of the onboard computer.
 
-***
-Foto's batterypack
-***
+<div style="display: flex; gap: 1rem; align-items: stretch; justify-content: center;">
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/SLIP-batterypack-cells.jpg')}
+      alt="Razer Viper V3 Pro side view"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px;"
+    />
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/SLIP-batterypack-cellsirl.jpg')}
+      alt="Razer Viper V3 Pro exploded view"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px;"
+    />
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/SLIP-batterypack-bms.jpg')}
+      alt="Razer Viper V3 Pro printed mouse"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px;"
+    />
+  </div>
+</div>
 
 ## Electrical and computing integration
 
@@ -110,9 +165,6 @@ The Jetson communicates with the four ODrive controllers over CAN through a USB-
 The computing hardware, converters and supporting electronics were mounted directly to the frame using custom 3D-printed brackets.
 Designing the mechanical and electrical layouts together was particularly important because wiring access, cooling, serviceability and sensor placement all competed for the limited internal space.
 
-***
-Solidworks explode video
-***
 
 ## Sensor integration
 
@@ -131,9 +183,23 @@ The LiDAR was thermally coupled to aluminium plates using thermal pads.
 A fan then forced air across the aluminium structure, effectively turning the sensor mount into a heatsink.
 This reduced the operating temperature from over **80 °C to approximately 35 °C**.
 
-***
-Foto heatsink
-***
+<div style="display: flex; gap: 1rem; align-items: stretch; justify-content: center;">
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/SLIP-lidar-newfrontpanel.jpeg')}
+      alt="Razer Viper V3 Pro side view"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px; image-rendering: auto;"
+    />
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <img
+      src={withBase('/assets/img/SLIP-lidar-heatsink.jpeg')}
+      alt="Razer Viper V3 Pro exploded view"
+      style="width: 100%; height: 220px; object-fit: cover; border-radius: 6px; image-rendering: auto;"
+    />
+  </div>
+</div>
 
 ## Engineering approach
 
@@ -174,9 +240,6 @@ With approximately **80 kg of additional payload**, the robot was still able to 
 The actual drivetrain limits were not reached during the available testing period. 
 The tests therefore primarily demonstrated that the platform had significant performance margin beyond the loads encountered during normal operation.
 
-***
-Foto dat ik er op zit en rijd met controller
-***
 
 ## Result
 
@@ -188,9 +251,20 @@ The vehicle was subsequently tested under more demanding conditions, including c
 During the available testing period, the actual drivetrain limits were not reached.
 The project therefore resulted not only in a functioning UGV, but in a reusable robotics research platform capable of supporting continued development and validation of autonomous systems
 
-***
-Foto complete robot
-***
+<video
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  style="width: 100%; border-radius: 6px;"
+>
+  <source
+    src={withBase('/assets/vids/nav-trail.mp4')}
+    type="video/mp4"
+  />
+  Your browser does not support the video tag.
+</video>
 
 ### Research platform validation
 
@@ -198,8 +272,101 @@ A key validation of the design was that the platform remained in active use afte
 It was used by the robotics engineer on the project as the physical platform for subsequent thesis research.
 This provided a form of real-world validation of the mechanical architecture, drivetrain, power system and sensor integration, since the robot had to remain functional and maintainable throughout repeated autonomous testing.
 
-***
-Filmpjes testen
-***
+<VideoScroll>
+  <figure class="field-card">
+    <video
+      src={withBase('/assets/vids/site-1.mp4')}
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-autoplay
+    />
+    <figcaption>Carrying a plywood panel across an unfinished warehouse floor.</figcaption>
+  </figure>
 
+  <figure class="field-card">
+    <video
+      src={withBase('/assets/vids/site-2.mp4')}
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-autoplay
+    />
+    <figcaption>Material transport through an active construction interior.</figcaption>
+  </figure>
 
+  <figure class="field-card">
+    <video
+      src={withBase('/assets/vids/site-3.mp4')}
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-autoplay
+    />
+    <figcaption>Navigating a scaffolded building entrance with a panel load.</figcaption>
+  </figure>
+
+  <figure class="field-card">
+    <video
+      src={withBase('/assets/vids/site-4.mp4')}
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-autoplay
+    />
+    <figcaption>Onboard scissor-lift platform raising boxed material through a doorway.</figcaption>
+  </figure>
+
+  <figure class="field-card">
+    <video
+      src={withBase('/assets/vids/site-5.mp4')}
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-autoplay
+    />
+    <figcaption>Testing the platform on uneven site terrain.</figcaption>
+  </figure>
+
+  <figure class="field-card">
+    <video
+      src={withBase('/assets/vids/site-6.mp4')}
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-autoplay
+    />
+    <figcaption>Hauling boxed material along an elevated scaffolded walkway, on-site with the crew.</figcaption>
+  </figure>
+
+  <figure class="field-card">
+    <video
+      src={withBase('/assets/vids/site-7.mp4')}
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-autoplay
+    />
+    <figcaption>Carrying strapped blocks and bagged material across a raw, unfinished interior.</figcaption>
+  </figure>
+    
+  <figure class="field-card is-landscape">
+    <video
+      src={withBase('/assets/vids/scaffolds.mp4')}
+      muted
+      loop
+      playsinline
+      preload="none"
+      data-autoplay
+    />
+    <figcaption>Terrain test: crossing a paving-to-decking threshold on the bare frame.</figcaption>
+  </figure>
+
+</VideoScroll>
